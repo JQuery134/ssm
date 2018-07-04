@@ -15,9 +15,7 @@ public class StudentDao {
 	}
 	
 	public void addStudent(Student student){
-//		int i=sqlSessionTemplate.insert("ssmDemo.bean.StudentMapper.addStudent", student);
-		System.out.println("按时发发哦");
-//		System.out.println(i);
+		int i=sqlSessionTemplate.insert("ssmDemo.bean.StudentMapper.addStudent", student);
 	}
 }
 

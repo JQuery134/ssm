@@ -16,7 +16,6 @@ public class StudentService {
 	}
 
 	public void addStudent(Student student) {
-		// TODO Auto-generated method stub
 		studentDao.addStudent(student);
 	}
 	

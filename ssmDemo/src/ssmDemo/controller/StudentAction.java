@@ -26,10 +26,8 @@ public class StudentAction {
 
 	@RequestMapping(value="/addStudent")
 	public void addStudent(){
-		Student student=new Student(20,"bao",2);
+		Student student=new Student(100,"bao",2);
 		studentService.addStudent(student);
-		logger.info("哈哈哈");
-		
 	}
 	
 }
