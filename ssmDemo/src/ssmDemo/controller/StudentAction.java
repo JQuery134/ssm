@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import ssmDemo.bean.Student;
 import ssmDemo.service.StudentService;
@@ -27,7 +28,8 @@ public class StudentAction {
 	public void addStudent(){
 		Student student=new Student(20,"bao",2);
 		studentService.addStudent(student);
-		logger.info("°ü»ª½Ü+++++++++++++++++");
+		logger.info("å“ˆå“ˆå“ˆ");
+		
 	}
 	
 }
