@@ -54,19 +54,37 @@
 	<bean id="studentService" class="ssmDemo.service.StudentService">
 		<property name="studentDao" ref="studentDao"></property>
 	</bean>
-	
-	<!-- ############# Spring声明式事务管理配置############### -->
+	<!-- 事务管理器 -->
 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
-	<tx:advice id="txAdvice" transaction-manager="txManager">
+	<!-- 开启事务注解 -->
+	<tx:annotation-driven transaction-manager="txManager" proxy-target-class="true"/>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- ############# Spring声明式事务管理配置############### -->
+	
+	<!--<tx:advice id="txAdvice" transaction-manager="txManager">
 		<tx:attributes>
 			<tx:method name="get*" read-only="false"/>
 			<tx:method name="find*" read-only="false"/>
 			<tx:method name="add*" read-only="false"/>
 			<tx:method name="*" read-only="false"/>
 		</tx:attributes>
-	</tx:advice>
+	</tx:advice> -->
 	<!-- <aop:config>
 		<aop:pointcut expression="execution(* ssmDemo.dao.*.*(..))" id="pt"/>
 		<aop:advisor advice-ref="txAdvice"/>
